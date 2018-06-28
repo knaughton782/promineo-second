@@ -11,13 +11,14 @@ public class MenuDrivenApp {
 		Scanner sc = new Scanner(System.in);
 		
 		//the application exits if the user picks 4
-		while (decision != 4) {
+		while (decision != 5) {
 			
 			
 			System.out.println("1) Create a Username");
 			System.out.println("2) Pick Yes or No");
 			System.out.println("3) Play a number game");
-			System.out.println("4) Exit");
+			System.out.println("4) Option 4");
+			System.out.println("5) Exit");
 			System.out.print("Pick an option: " );
 			decision = sc.nextInt();
 			
@@ -60,7 +61,14 @@ public class MenuDrivenApp {
 					}
 				System.out.println("The number game is over!");
 			}
-				
+			
+			else if (decision == 4) {
+				if (!userName.equals("")) {
+				System.out.println("I'm tired of picking options. Pick option 5 already!");
+			    } else {
+			    	System.out.println("Have you played the number game yet?");
+			    }
+		    }
 		}
 		
 		System.out.println("Goodbye!");
